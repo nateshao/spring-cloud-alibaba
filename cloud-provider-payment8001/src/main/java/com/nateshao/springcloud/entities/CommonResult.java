@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @Date Created by 邵桐杰 on 2023/6/23  11:48
+ * @Date Created by 邵桐杰 on 2023/6/24  10:17
  * @微信公众号 千羽的编程时光
  * @博客 https://nateshao.gitlab.io
  * @GitHub https://github.com/nateshao
@@ -15,13 +15,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CommanResult<T> {
-
+public class CommonResult<T>
+{
     private Integer code;
-    private String message;
-    private T data;
+    private String  message;
+    private T       data;
 
-    public CommanResult(Integer code, String message) {
-        this(code, message, null);
+    public CommonResult(Integer code,String message)
+    {
+        this(code,message,null);
     }
 }
