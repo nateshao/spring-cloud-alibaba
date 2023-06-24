@@ -19,6 +19,7 @@ public class PaymentController
     @Value("${server.port}")
     private String serverPort;
 
+    // http://localhost:83/consumer/payment/nacos/13
     @GetMapping(value = "/payment/nacos/{id}")
     public String getPayment(@PathVariable("id") Integer id)
     {

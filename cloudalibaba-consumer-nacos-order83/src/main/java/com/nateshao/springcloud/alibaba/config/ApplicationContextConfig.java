@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 public class ApplicationContextConfig
 {
     @Bean
-    @LoadBalanced
+    @LoadBalanced // 给 RestTemplate 增加拦截器，在请求之前对请求的地址进行替换，或者根据具体的负载策略选择服务地址，然后再去调用。
     public RestTemplate getRestTemplate()
     {
         return new RestTemplate();

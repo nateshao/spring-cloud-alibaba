@@ -6,6 +6,7 @@ import com.nateshao.springcloud.alibaba.service.PaymentService;
 import com.nateshao.springcloud.entities.CommonResult;
 import com.nateshao.springcloud.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,9 @@ import javax.annotation.Resource;
 @Slf4j
 public class CircleBreakerController {
     public static final String SERVICE_URL = "http://nacos-payment-provider";
+
+    @Value("service-url.nacos-user-service")
+    private String serviceUrl;
 
     @Resource
     private RestTemplate restTemplate;
@@ -68,4 +72,7 @@ public class CircleBreakerController {
     public CommonResult<Payment> paymentSQL(@PathVariable("id") Long id) {
         return paymentService.paymentSQL(id);
     }
+
+
+
 }

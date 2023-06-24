@@ -11,6 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
  * Description:
+ * 访问：http://localhost:83/consumer/payment/nacos/13
  */
 @EnableDiscoveryClient
 @SpringBootApplication
