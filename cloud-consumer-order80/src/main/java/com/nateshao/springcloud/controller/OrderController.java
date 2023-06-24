@@ -18,6 +18,7 @@ import javax.annotation.Resource;
  * @GitHub https://github.com/nateshao
  * @Gitee https://gitee.com/nateshao
  * Description:
+ * 访问：http://localhost:88/consumer/payment/get/31
  */
 @RestController
 @Slf4j
@@ -28,13 +29,13 @@ public class OrderController {
     private RestTemplate restTemplate;
 //    @Resource
 //    private DiscoveryClient discoveryClient;
-
+    // 访问：http://localhost:88/consumer/payment/create?serial=123
     @GetMapping("/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment)
     {
         return restTemplate.postForObject(PAYMENT_URL +"/payment/create",payment,CommonResult.class);
     }
-
+        // 访问：http://localhost:88/consumer/payment/get/31
     @GetMapping("/consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id)
     {

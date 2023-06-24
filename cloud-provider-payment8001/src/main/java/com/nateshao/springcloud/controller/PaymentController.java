@@ -25,7 +25,8 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/create")
-    public CommonResult create(Payment payment) {
+//    public CommonResult create(Payment payment) { // 不加的话，插入数据为空
+    public CommonResult create(@RequestBody Payment payment) {
         int res = paymentService.insert(payment);
         log.info("********************插入结果：" + res);
         if (res > 0) return new CommonResult(200, "插入数据成功", res);

@@ -7,26 +7,20 @@ spring cloud alibaba学习
 
 ## 版本要保持一致
 
-cloud
+cloud - Hoxton.SR1
 
-- Hoxton.SR1
+boot - 2.2.2.RELEASE
 
-boot
+cloud alibaba - 2.1.0.RELEASE
 
--  2.2.2.RELEASE
+Java - Java8
 
-cloud alibaba
+Maven - 3.5及以上
 
-- 2.1.0.RELEASE
+Mysql - 5.7及以上
 
-Java
+## nacos
+下载：https://github.com/alibaba/nacos/releases?page=4
+加压之后，直接点击startup.cmd启动，访问：http://localhost:8848/nacos/  账号密码都是：`nacos`
 
-- Java8
 
-Maven
-
-- 3.5及以上
-
-Mysql
-
-- 5.7及以上
