@@ -36,7 +36,7 @@ public class PaymentController {
     @GetMapping("/queryById/{id}")
     public CommanResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         Payment res = paymentService.getPaymentById(id);
-        log.info("********************查询结果：" + res);
+        log.info("********************查询结果：" + res+"dsaaaaaaaaaaaa");
         if (res != null) return new CommanResult(200, "查询数据成功", res);
         else return new CommanResult(444, "查询数据库失败", null);
     }
