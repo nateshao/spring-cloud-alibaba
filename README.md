@@ -1,4 +1,4 @@
-# spring-cloud-alibaba
+# spring-cloud-alibaba 微服务分布式架构
 官方文档：
 
 1. https://spring.io/projects/spring-cloud-alibaba
@@ -19,6 +19,8 @@
 | mysql                | 5.7及以上     |
 
 ## nacos
+官方文档：https://nacos.io/zh-cn/docs/cluster-mode-quick-start.html
+
 下载地址：https://github.com/alibaba/nacos/releases?page=4
 
 加压之后，直接点击startup.cmd启动，
